@@ -3,12 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full-Screen Menu</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Fullscreen Background</title>
+    <style>
+        /* حذف حاشیه‌ها و فاصله‌ها */
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* جلوگیری از اسکرول */
+            width: 100%;
+            height: 100%;
+        }
+
+        /* تنظیم اولیه برای تصویر */
+        #background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: fill; /* تنظیم پر کردن صفحه */
+        }
+    </style>
 </head>
 <body>
-    <div class="menu-container">
-        <img src="menu.jpg" alt="Restaurant Menu" class="menu-image">
-    </div>
+    <img id="background-image" src="menu.jpg" alt="Restaurant Menu">
+    <script>
+        // تابع برای تنظیم اندازه تصویر با اندازه صفحه
+        function resizeBackground() {
+            const img = document.getElementById('background-image');
+            const width = window.innerWidth; // عرض صفحه
+            const height = window.innerHeight; // ارتفاع صفحه
+            
+            // تنظیم اندازه تصویر
+            img.style.width = width + "px";
+            img.style.height = height + "px";
+        }
+
+        // فراخوانی تابع هنگام بارگذاری صفحه
+        window.onload = resizeBackground;
+
+        // فراخوانی تابع هنگام تغییر اندازه صفحه
+        window.onresize = resizeBackground;
+    </script>
 </body>
 </html>
