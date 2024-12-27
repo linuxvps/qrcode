@@ -1,36 +1,30 @@
-body {
+/* حذف حاشیه‌ها و تنظیمات اولیه */
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
     box-sizing: border-box;
-    text-align: center;
-    background-color: #f8f8f8;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 1rem 0;
+/* ارتفاع و عرض کل صفحه */
+html, body {
+    width: 100%;
+    height: 100%;
 }
 
-h1 {
-    margin: 0;
-    font-size: 2rem;
-}
-
-main {
-    padding: 1rem;
-}
-
-.menu-image-container {
-    max-width: 100%;
+/* تنظیم کانتینر برای پوشش کامل */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
-    text-align: center;
+    background-color: #000; /* پس‌زمینه سیاه برای هماهنگی */
 }
 
+/* تنظیم تصویر برای پوشش کامل */
 .menu-image {
     width: 100%;
-    max-width: 1000px; /* Adjust to the maximum width of your menu image */
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    object-fit: contain; /* نمایش کامل تصویر با حفظ تناسب */
 }
