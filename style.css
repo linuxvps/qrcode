@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+main {
+    padding: 1rem;
+}
+
+.menu-image-container {
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.menu-image {
+    width: 100%;
+    max-width: 1000px; /* Adjust to the maximum width of your menu image */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
